@@ -4,7 +4,7 @@ Created on Thu Dec  3 00:56:07 2020
 
 @author: oumaima
 """
-# ------------------------------------------------ biblio-------------------------------------
+# ------------------------------------------------ library-------------------------------------
 
 # examplesprint(numerize('Eight fifty million'))
 #from numerizer import numerize
@@ -24,8 +24,8 @@ import time
 import demoji
 #demoji.download_codes()
 
-# ------------------------------------------------ recuperation des données-------------------------------------
-CLIENT_SECRETS_FILE = "code_secret_client_key.json"
+# ------------------------------------------------ data recovery -------------------------------------
+CLIENT_SECRETS_FILE = "your_code_secret_client_key.json"
 SCOPES = ['https://www.googleapis.com/auth/youtube.force-ssl']
 API_SERVICE_NAME = 'youtube'
 API_VERSION = 'v3'
@@ -150,7 +150,7 @@ def getVideosStats(service, id1):
         print("-----", str(e))
     
         
-    #convertir le liste en dataframe  
+    #convert list to dataframe  
     df_Youtube = pd.DataFrame(list(chain.from_iterable(liste_commentaire)))
     print(df_Youtube.shape)
     #convertir dataframe en fichier excel
@@ -161,6 +161,3 @@ def getVideosStats(service, id1):
 
 #df.columns = ['Channel', 'Title', 'ID', 'Comment']
 #df = pd.DataFrame(liste_commentaire, columns=['title','id','Commentaires'])
-
-
-# ------------------------------------------------ prétraitement des données-------------------------------------
